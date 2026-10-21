@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #021e2c;
+        font-family: sans-serif;
+    }
+
+    /* 1. Halkan ayaa lagu qarsoonaa checkbox-ka */
+    #check {
+        display: none;
+    }
+
+    label.logo {
+        color: rgb(7, 31, 83);
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 50px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    nav {
+        background: white;
+        height: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 5px;
+        text-transform: capitalize;
+    }
+
+    nav ul li {
+        line-height: 80px;
+        margin: 0 5px;
+    }
+
+    nav ul li a {
+        color: rgb(5, 91, 112);
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+        background: #146791;
+        color: white;
+    }
+
+    .checkbtn {
+        font-size: 30px;
+        color: rgb(12, 37, 121);
+        line-height: 80px;
+        cursor: pointer;
+        display: none; /* Mobile-ka keliya ayaa lagu muujinayaa */
+    }
+
+    /* 2. Responsive Design (Taleefannada) */
+    @media (max-width: 850px) {
+        .checkbtn {
+            display: block; /* Muuji icon-ka menu-ga */
+        }
+
+        nav ul {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: #112233;
+            top: 80px;
+            left: -100%; /* Qari menu-ga marka uu xiran yahay */
+            text-align: center;
+            flex-direction: column;
+            justify-content: center;
+            transition: all 0.5s;
+        }
+
+        nav ul li {
+            display: block;
+            margin: 20px 0;
+            line-height: normal;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Marka la riixo icon-ka, soo saar menu-ga */
+        #check:checked ~ ul {
+            left: 0;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <nav>
+        <label class="logo">my project</label>
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="#" class="">Quiz App</a></li>
+            <li><a href="#">pomodoro</a></li>
+            <li><a href="#">password Generate</a></li>
+            <li><a href="#">EvcPlus</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

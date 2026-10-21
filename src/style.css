@@ -1,0 +1,112 @@
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #021e2c;
+            font-family: sans-serif;
+        }
+
+        label.logo {
+            color: rgb(7, 31, 83);
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 50px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        nav {
+            background: white;
+            height: 80px;
+            width: 100%;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 50px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        nav ul li {
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a {
+            color: rgb(5, 91, 112);
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: capitalize;
+        }
+
+        a.active, a:hover {
+            background: #146791;
+            color: white;
+            transition: 0.3s;
+        }
+
+        /* 1. Qari batoonka checkbox-ka ee caadiga ah */
+        #check {
+            display: none;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: rgb(12, 37, 121);
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none; /* Waxaa la soo bandhigayaa keliya mobile-ka */
+        }
+
+        /* 2. Responsive Design (Taleefannada) */
+        @media (max-width: 850px) {
+            .checkbtn {
+                display: block; /* Muuji batoonka menu-ga mobile-ka */
+            }
+
+            nav ul {
+                position: fixed;
+                width: 100vw; /* Bedelay si uusan shaashadda uga bixin */
+                height: 100vh;
+                background: #112233;
+                top: 80px;
+                left: -100%; /* Si meel looga saaro marka uu xiran yahay */
+                text-align: center;
+                flex-direction: column;
+                justify-content: center;
+                transition: all 0.5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 20px 0;
+                line-height: normal;
+            }
+
+            nav ul li a {
+                color: white;
+                font-size: 20px;
+            }
+
+            /* 3. Marka checkbox-ka la calaamadiyo (la riixo batoonka) */
+            #check:checked ~ ul {
+                left: 0; /* Keen menu-ga bartamaha shaashadda */
+            }
+        }
+
+
+
+        /* quiz app */
+
+
+       
